@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Printf("Initial!\n")
+	fmt.Printf("Server will be here!\n")
 }
