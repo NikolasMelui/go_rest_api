@@ -53,18 +53,18 @@ func (s *APIServer) configureRouter() {
 
 func (s *APIServer) handleMain() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		io.WriteString(w, "Test the main router")
+		io.WriteString(w, "Main handler")
 	}
 }
 
 func (s *APIServer) handleFirst() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		io.WriteString(w, "This is the first handler")
+		io.WriteString(w, "First handler")
 	}
 }
 
 func (s *APIServer) handleSecond() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		io.WriteString(w, "This is the second handler")
+		io.WriteString(w, "Second handler")
 	}
 }
