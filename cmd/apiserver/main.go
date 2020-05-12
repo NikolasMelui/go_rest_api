@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/nikolasmelui/go_rest_api/internal/app/apiserver"
+)
 
 func main() {
-	fmt.Printf("Server will be here!\n")
+	s := apiserver.New()
+	if err := s.Start(); err != nil {
+		log.Fatal(err)
+	}
 }
