@@ -1,2 +1,5 @@
 bind_addr = ":8080"
 log_level = "debug"
+
+[store]
+database_url = "host=localhost username=nikolasmelui dbname=go_rest_api password=password sslmode=disable"
