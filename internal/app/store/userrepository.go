@@ -7,7 +7,14 @@ type UserRepository struct {
 }
 
 func (r *UserRepository) Create(u *model.User) (*model.User, error) {
-	return nil, nil
+	if err := r.store.db.QueryRow(
+		"INSERT INTO users (email, password) VALUES ($1, $2) RETURNING id;",
+		u.Email, u.Password,
+	).Scan(&u.ID); err != nil {
+		return nil, err
+	}
+	return u, nil
+
 }
 
 func (r *UserRepository) FindByEmail(email string) (*model.User, error) {
