@@ -4,5 +4,17 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "sqltools.connections": [
+      {
+        "database": "b2b",
+        "dialect": "PostgreSQL",
+        "name": "b2b",
+        "password": "password",
+        "port": 5432,
+        "server": "localhost",
+        "username": "nikolasmelui"
+      }
+    ]
+  }
 }
